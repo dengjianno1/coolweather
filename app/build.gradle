@@ -11,6 +11,14 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
+    productFlavors{
+        qihoo{
+            applicationId "com.coolweather.android.qihoo"
+        }
+        baidu{
+            applicationId "com.coolweather.android.baidu"
+        }
+    }
     signingConfigs{
         config{
             storeFile file(KEY_PATH)
@@ -23,7 +31,7 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            signingConfigs.config
+            signingConfig signingConfigs.config
         }
     }
 }
