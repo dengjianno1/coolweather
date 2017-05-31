@@ -185,6 +185,7 @@ public class WeatherActivity extends AppCompatActivity {
             titleCity.setText(cityName);
             titleUpdateTime.setText(updateTime);
             degreeText.setText(degree);
+            weatherInfoText.setText(weatherInfo);
             forecastLayout.removeAllViews();
             for (Forecast forecast:weather.forecastList) {
                 View view= LayoutInflater.from(this).inflate(R.layout.forecast_item,forecastLayout,false);
